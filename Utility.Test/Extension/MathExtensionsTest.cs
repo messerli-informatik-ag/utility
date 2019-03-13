@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Utility.Utility.Extension;
+using Utility.Extension;
 using Xunit;
 
-namespace Utility.Utility.Test.Extension
+namespace Utility.Test.Extension
 {
     public class MathExtensionsTest
     {

@@ -1,4 +1,4 @@
-﻿namespace Utility.Utility
+﻿namespace Utility
 {
     public class Math
     {

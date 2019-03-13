@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Utility.Utility.Extension;
+using Utility.Extension;
 using Xunit;
 
-namespace Utility.Utility.Test.Extension
+namespace Utility.Test.Extension
 {
     public class FirstOrDefaultAsyncTest
     {

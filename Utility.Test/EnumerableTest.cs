@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Utility.Utility.Test
+namespace Utility.Test
 {
     public class EnumerableTest
     {

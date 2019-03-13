@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Utility.Utility.Extension
+namespace Utility.Extension
 {
     public static class FirstOrDefaultAsyncExtension
     {

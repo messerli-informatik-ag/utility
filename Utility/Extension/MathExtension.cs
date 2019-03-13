@@ -1,4 +1,4 @@
-﻿namespace Utility.Utility.Extension
+﻿namespace Utility.Extension
 {
     public static class MathExtension
     {
