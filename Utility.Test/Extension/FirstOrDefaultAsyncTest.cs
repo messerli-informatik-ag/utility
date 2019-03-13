@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Utility.Utility.Extension;
 using Xunit;
 
 namespace Utility.Utility.Test.Extension
