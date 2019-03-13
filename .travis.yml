@@ -1,0 +1,9 @@
+
+language: csharp
+solution: Utility.sln
+mono: latest
+dotnet: latest
+script:
+ - dotnet restore
+ - dotnet build
+ - dotnet test
