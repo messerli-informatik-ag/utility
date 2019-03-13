@@ -13,5 +13,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.csproj" />
   </ItemGroup>
-  <Import Project="..\..\.paket\Paket.Restore.targets" />
+  <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
