@@ -242,6 +242,7 @@ _Pvt_Extensions
 
 # Paket dependency manager
 paket-files/
+paket.lock
 
 # FAKE - F# Make
 .fake/
