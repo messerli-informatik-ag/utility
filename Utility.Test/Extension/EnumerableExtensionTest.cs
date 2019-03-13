@@ -1,8 +1,7 @@
 ﻿using System.Linq;
-using Update.Shared.Utility.Extension;
 using Xunit;
 
-namespace Update.Shared.Utility.Test.Extension
+namespace Utility.Utility.Test.Extension
 {
     public class EnumerableExtensionTest
     {

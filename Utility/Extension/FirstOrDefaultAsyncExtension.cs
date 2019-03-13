@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Update.Shared.Utility.Extension
+namespace Utility.Utility.Extension
 {
     public static class FirstOrDefaultAsyncExtension
     {
         public static async Task<TSource> FirstOrDefaultAsync<TSource>(this IEnumerable<Task<TSource>> source,
             Func<Task<TSource>, Task<bool>> predicate)
         {
-            foreach (var item in source) {
-                if (await predicate(item)) {
+            foreach (var item in source)
+            {
+                if (await predicate(item))
+                {
                     return await item;
                 }
             }
@@ -21,8 +23,10 @@ namespace Update.Shared.Utility.Extension
         public static async Task<TSource> FirstOrDefaultAsync<TSource>(this IEnumerable<TSource> source,
             Func<TSource, Task<bool>> predicate)
         {
-            foreach (var item in source) {
-                if (await predicate(item)) {
+            foreach (var item in source)
+            {
+                if (await predicate(item))
+                {
                     return item;
                 }
             }

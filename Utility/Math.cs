@@ -1,4 +1,4 @@
-﻿namespace Update.Shared.Utility
+﻿namespace Utility.Utility
 {
     public class Math
     {

@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>Update.Shared.Utility.Test</RootNamespace>
+    <RootNamespace>Utility.Utility.Test</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

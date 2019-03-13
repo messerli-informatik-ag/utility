@@ -1,4 +1,4 @@
-﻿namespace Update.Shared.Utility.Extension
+﻿namespace Utility.Utility.Extension
 {
     public static class MathExtension
     {

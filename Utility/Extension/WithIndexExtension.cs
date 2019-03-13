@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Update.Shared.Utility.Extension
+namespace Utility.Utility.Extension
 {
     public static class WithIndexExtension
     {

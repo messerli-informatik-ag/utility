@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Update.Shared.Utility
+namespace Utility.Utility
 {
     public static class Enumerable
     {
