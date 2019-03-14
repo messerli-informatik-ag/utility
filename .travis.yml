@@ -2,7 +2,7 @@
 language: csharp
 solution: Utility.sln
 mono: 5.18.0
-dotnet: 2.1.502
+dotnet: 2.2.105
  
 script:
  - dotnet restore
