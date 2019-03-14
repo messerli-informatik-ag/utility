@@ -1,8 +1,16 @@
 
 language: csharp
-dotnet: 2.2.104
-mono: 5.18.0
+dotnet: 2.1.502
+mono: none
  
+install:
+ - curl https://origin-download.mono-project.com/repo/xamarin.gpg | sudo apt-key add -
+ - sudo apt install apt-transport-https ca-certificates -y
+ - echo "deb https://download.mono-project.com/repo/ubuntu stable-trusty main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+ - sudo apt update
+ - sudo apt upgrade -y
+ - sudo apt install mono-devel
+
 script:
  - mono ./.paket/paket.exe install
  - dotnet restore
