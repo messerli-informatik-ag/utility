@@ -1,11 +1,12 @@
-
+dist: xenial
 language: csharp
 dotnet: 2.1.502
 
 install:
+ - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
  - curl https://origin-download.mono-project.com/repo/xamarin.gpg | sudo apt-key add -
  - sudo apt install apt-transport-https ca-certificates -y
- - echo "deb https://download.mono-project.com/repo/ubuntu stable-trusty main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+ - echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
  - sudo apt update --allow-unauthenticated
  - sudo apt upgrade --allow-unauthenticated -y
  - sudo apt install mono-devel
