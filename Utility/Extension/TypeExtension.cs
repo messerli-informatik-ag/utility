@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace Utility.Extension
+namespace Messerli.Utility.Extension
 {
     public static class TypeExtension
     {

@@ -1,8 +1,8 @@
 using System.Linq;
-using Utility.Extension;
+using Messerli.Utility.Extension;
 using Xunit;
 
-namespace Utility.Test.Extension
+namespace Messerli.Utility.Test.Extension
 {
     public class WithIndexTest
     {
