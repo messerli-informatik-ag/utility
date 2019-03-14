@@ -1,6 +1,6 @@
 
 language: csharp
-dotnet: 2.2.0
+dotnet: 2.2.104
 mono: 5.18.0
  
 script:
