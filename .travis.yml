@@ -1,8 +1,7 @@
 
 language: csharp
 dotnet: 2.1.502
-mono: none
- 
+
 install:
  - curl https://origin-download.mono-project.com/repo/xamarin.gpg | sudo apt-key add -
  - sudo apt install apt-transport-https ca-certificates -y
