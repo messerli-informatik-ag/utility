@@ -4,6 +4,7 @@ dotnet: 2.2.105
 mono: 5.18.0
  
 script:
+ - mono ./.paket/paket.exe install
  - dotnet restore
  - dotnet build
  - dotnet test
