@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Utility.Extension
+namespace Messerli.Utility.Extension
 {
     public static class EnumerableExtension
     {

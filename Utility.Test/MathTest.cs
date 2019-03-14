@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 
-namespace Utility.Test
+namespace Messerli.Utility.Test
 {
     public class MathTest
     {
