@@ -1,6 +1,7 @@
 dist: xenial
 language: csharp
 dotnet: 2.1.502
+mono: none
 
 install:
  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
