@@ -7,8 +7,8 @@ install:
  - curl https://origin-download.mono-project.com/repo/xamarin.gpg | sudo apt-key add -
  - sudo apt install apt-transport-https ca-certificates -y
  - echo "deb https://download.mono-project.com/repo/ubuntu stable-trusty main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
- - sudo apt update
- - sudo apt upgrade -y
+ - sudo apt update --allow-unauthenticated
+ - sudo apt upgrade --allow-unauthenticated -y
  - sudo apt install mono-devel
 
 script:
