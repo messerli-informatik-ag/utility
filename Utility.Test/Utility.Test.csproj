@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <IsPackable>false</IsPackable>
     <RootNamespace>Messerli.Utility.Test</RootNamespace>
-    <AssemblyName>vUtility.Test</AssemblyName>
+    <AssemblyName>Messerli.Utility.Test</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
