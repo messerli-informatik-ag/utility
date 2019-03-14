@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Utility.Extension
+namespace Messerli.Utility.Extension
 {
     public static class WithIndexExtension
     {

@@ -1,4 +1,4 @@
-﻿namespace Utility.Extension
+﻿namespace Messerli.Utility.Extension
 {
     public static class MathExtension
     {

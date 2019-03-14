@@ -1,4 +1,4 @@
-﻿namespace Utility
+﻿namespace Messerli.Utility
 {
     public class Math
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Utility
+namespace Messerli.Utility
 {
     public static class Enumerable
     {
