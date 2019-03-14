@@ -1,6 +1,4 @@
 dist: xenial
-dotnet: none
-mono: none
 
 install:
  # Add GPG keys
