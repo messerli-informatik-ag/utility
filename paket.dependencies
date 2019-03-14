@@ -1,18 +1,3 @@
 framework auto-detect
 
 source https://www.nuget.org/api/v2
-
-nuget Newtonsoft.Json ~> 11.0
-nuget semver ~> 2.0
-nuget NSubstitute ~> 3.1
-nuget RichardSzalay.MockHttp ~> 5.0
-nuget CommandLineParser ~> 2.3
-nuget Autofac ~> 4.8
-nuget Autofac.Configuration ~> 4.1
-nuget Microsoft.Extensions.Configuration.Json ~> 2.2
-nuget JetBrains.Annotations ~> 2018.2
-nuget ShellProgressBar ~> 4.2
-nuget Nett ~> 0.10
-nuget Fody ~> 4.0
-nuget Equals.Fody ~> 1.9
-nuget Soltys.ChangeCase ~> 1.6
