@@ -1,6 +1,5 @@
 
 language: csharp
-solution: Utility.sln
 mono: 5.18.0
 dotnet: 2.2.105
  
