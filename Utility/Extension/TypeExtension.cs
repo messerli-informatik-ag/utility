@@ -12,12 +12,12 @@ namespace Messerli.Utility.Extension
     {
         public static bool IsEnumerable(this Type type)
         {
-            return type.GetInterface(nameof(IEnumerable)) != null;
+            return type == typeof(IEnumerable) || type.GetInterface(nameof(IEnumerable)) != null;
         }
 
         public static bool IsQueryable(this Type type)
         {
-            return type.GetInterface(nameof(IQueryable)) != null;
+            return type == typeof(IQueryable) || type.GetInterface(nameof(IQueryable)) != null;
         }
 
         /// <summary>
