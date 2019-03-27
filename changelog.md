@@ -3,5 +3,5 @@
 ## 0.1.0
 - Initial release
 
-## To be announced
+## 0.1.1
 - Fix type checks
