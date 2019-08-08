@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Messerli.Utility.Extension;
 using Xunit;
@@ -19,7 +18,7 @@ namespace Messerli.Utility.Test.Extension
         [MemberData(nameof(GetTaskListResultingDefault))]
         public async void ReturnsDefaultTask(Task<int>[] source, int compare)
         {
-            Assert.Equal(default(int), await source.FirstOrDefaultAsync(async value => await value > compare));
+            Assert.Equal(default, await source.FirstOrDefaultAsync(async value => await value > compare));
         }
 
         [Theory]
@@ -33,41 +32,53 @@ namespace Messerli.Utility.Test.Extension
         [MemberData(nameof(GetListResultingDefault))]
         public async void ReturnsDefault(int[] source, int compare)
         {
-            Assert.Equal(default(int), await source.FirstOrDefaultAsync(async value => await GreaterThan(value, compare)));
+            Assert.Equal(default, await source.FirstOrDefaultAsync(async value => await GreaterThan(value, compare)));
         }
 
-        public static IEnumerable<object[]> GetTaskList()
+        public static TheoryData<Task<int>[], int, int> GetTaskList()
         {
-            yield return new object[] { new[] { Task.FromResult(1), Task.FromResult(2), Task.FromResult(3), Task.FromResult(4), Task.FromResult(5) }, 2, 3 };
-            yield return new object[] { new[] { Task.FromResult(3), Task.FromResult(4), Task.FromResult(5) }, 2, 3 };
-            yield return new object[] { new[] { Task.FromResult(1), Task.FromResult(2), Task.FromResult(3) }, 2, 3 };
-            yield return new object[] { new[] { Task.FromResult(3) }, 2, 3 };
+            return new TheoryData<Task<int>[], int, int>
+            {
+                { new[] { Task.FromResult(1), Task.FromResult(2), Task.FromResult(3), Task.FromResult(4), Task.FromResult(5) }, 2, 3 },
+                { new[] {Task.FromResult(3), Task.FromResult(4), Task.FromResult(5)}, 2, 3 },
+                { new[] {Task.FromResult(1), Task.FromResult(2), Task.FromResult(3)}, 2, 3 },
+                { new[] {Task.FromResult(3)}, 2, 3 },
+            };
         }
 
-        public static IEnumerable<object[]> GetTaskListResultingDefault()
+        public static TheoryData<Task<int>[], int> GetTaskListResultingDefault()
         {
-            yield return new object[] { new[] { Task.FromResult(1), Task.FromResult(2), Task.FromResult(3), Task.FromResult(4), Task.FromResult(5) }, 10 };
-            yield return new object[] { new[] { Task.FromResult(3), Task.FromResult(4), Task.FromResult(5) }, 10 };
-            yield return new object[] { new[] { Task.FromResult(1), Task.FromResult(2), Task.FromResult(3) }, 10 };
-            yield return new object[] { new[] { Task.FromResult(3) }, 10 };
-            yield return new object[] { new Task<int>[0], 10 };
+            return new TheoryData<Task<int>[], int>
+            {
+                { new[] { Task.FromResult(1), Task.FromResult(2), Task.FromResult(3), Task.FromResult(4), Task.FromResult(5) }, 10 },
+                { new[] { Task.FromResult(3), Task.FromResult(4), Task.FromResult(5) }, 10 },
+                { new[] { Task.FromResult(1), Task.FromResult(2), Task.FromResult(3) }, 10 },
+                { new[] { Task.FromResult(3) }, 10 },
+                { new Task<int>[0], 10 },
+            };
         }
 
-        public static IEnumerable<object[]> GetList()
+        public static TheoryData<int[], int, int> GetList()
         {
-            yield return new object[] { new[] { 1, 2, 3, 4, 5 }, 2, 3 };
-            yield return new object[] { new[] { 3, 4, 5 }, 2, 3 };
-            yield return new object[] { new[] { 1, 2, 3 }, 2, 3 };
-            yield return new object[] { new[] { 3 }, 2, 3 };
+            return new TheoryData<int[], int, int>
+            {
+                { new[] { 1, 2, 3, 4, 5 }, 2, 3 },
+                { new[] { 3, 4, 5 }, 2, 3 },
+                { new[] { 1, 2, 3 }, 2, 3 },
+                { new[] { 3 }, 2, 3 },
+            };
         }
 
-        public static IEnumerable<object[]> GetListResultingDefault()
+        public static TheoryData<int[], int> GetListResultingDefault()
         {
-            yield return new object[] { new[] { 1, 2, 3, 4, 5 }, 10 };
-            yield return new object[] { new[] { 3, 4, 5 }, 10 };
-            yield return new object[] { new[] { 1, 2, 3 }, 10 };
-            yield return new object[] { new[] { 3 }, 10 };
-            yield return new object[] { new int[0], 10 };
+            return new TheoryData<int[], int>
+            {
+                { new[] { 1, 2, 3, 4, 5 }, 10 },
+                { new[] { 3, 4, 5 }, 10 },
+                { new[] { 1, 2, 3 }, 10 },
+                { new[] { 3 }, 10 },
+                { new int[0], 10 },
+            };
         }
 
         private static async Task<bool> GreaterThan<T>(IComparable<T> v1, T v2)

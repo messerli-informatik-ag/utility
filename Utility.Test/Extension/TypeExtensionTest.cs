@@ -30,6 +30,5 @@ namespace Messerli.Utility.Test.Extension
         {
             Assert.True(type.IsEnumerable());
         }
-
     }
 }
