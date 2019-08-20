@@ -36,7 +36,6 @@ namespace Messerli.Utility.Test.Extension
             var (thirdElement, thirdIndex) = withIndexElements[2];
             Assert.Equal("c", thirdElement);
             Assert.Equal(2, thirdIndex);
-
         }
     }
 }

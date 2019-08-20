@@ -5,3 +5,6 @@
 
 ## 0.1.1
 - Fix type checks
+
+## 0.2.0
+- Update to netstandard2.1

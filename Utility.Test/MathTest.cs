@@ -5,12 +5,15 @@ namespace Messerli.Utility.Test
 {
     public class MathTest
     {
-        public static IEnumerable<object[]> DifferenceExamples()
+        public static TheoryData<int, int, int> DifferenceExamples()
         {
-            yield return new object[] { 334, 1000, 666 };
-            yield return new object[] { 254332385, 254873654, 541269 };
-            yield return new object[] { -100, 200, 300 };
-            yield return new object[] { -78862, 789654, 868516 };
+            return new TheoryData<int, int, int>
+            {
+                {334, 1000, 666},
+                {254332385, 254873654, 541269},
+                {-100, 200, 300},
+                {-78862, 789654, 868516},
+            };
         }
 
         [Theory]
