@@ -1,14 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <Version>0.2.0</Version>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>Messerli.Utility</RootNamespace>
-    <AssemblyName>Messerli.Utility</AssemblyName>
-    <LangVersion>8.0</LangVersion>
-    <Nullable>enable</Nullable>
-    <NullableContextOptions>enable</NullableContextOptions>
-    <NoWarn>$(NoWarn),1591</NoWarn>
-  </PropertyGroup>
-  <Import Project="..\.paket\Paket.Restore.targets" />
+    <PropertyGroup>
+        <Version>0.2.0</Version>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <RootNamespace>Messerli.Utility</RootNamespace>
+        <AssemblyName>Messerli.Utility</AssemblyName>
+        <LangVersion>8.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <NullableContextOptions>enable</NullableContextOptions>
+        <NoWarn>$(NoWarn),1591</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup>
+        <RepositoryUrl>https://github.com/messerli-informatik-ag/utility</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageId>Messerli.Utility</PackageId>
+        <PackageTags>utility math</PackageTags>
+        <PackageLicenseExpression>MIT OR Apache-2.0</PackageLicenseExpression>
+        <Authors>Jan Nils Ferner, Dominic Groth, Thomas Bruderer</Authors>
+        <Copyright>© Messerli Informatik AG. All rights reserved.</Copyright>
+        <Description>Various utility functions and extension methods used by other Messerli libraries.</Description>
+    </PropertyGroup>
+    <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
