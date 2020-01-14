@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <Version>0.2.1</Version>
@@ -16,7 +16,6 @@
         <PackageId>Messerli.Utility</PackageId>
         <PackageTags>utility math</PackageTags>
         <PackageLicenseExpression>MIT OR Apache-2.0</PackageLicenseExpression>
-        <Authors>Jan Nils Ferner, Dominic Groth, Thomas Bruderer</Authors>
         <Copyright>© Messerli Informatik AG. All rights reserved.</Copyright>
         <Description>Various utility functions and extension methods used by other Messerli libraries.</Description>
     </PropertyGroup>
