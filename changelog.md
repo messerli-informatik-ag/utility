@@ -11,3 +11,7 @@
 
 ## 0.2.1
 - Update nuget metadata
+
+## 0.2.2
+- Add support for .NET Standard 2.0.
+- Remove misleading nullability attributes from `FirstOrDefaultAsync`.
