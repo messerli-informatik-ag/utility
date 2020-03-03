@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Messerli.Utility.Test.Extension
 {
-    public class EnumerableExtensionTest
+    public sealed class EnumerableExtensionTest
     {
         [Fact]
         public void ForEachExecutesAction()

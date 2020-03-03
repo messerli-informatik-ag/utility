@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Messerli.Utility.Test.Extension
 {
-    public class WithIndexTest
+    public sealed class WithIndexTest
     {
         [Fact]
         public void IsEmptyWhenCalledOnEmptyEnumerable()

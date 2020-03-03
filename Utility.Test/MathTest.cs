@@ -2,7 +2,7 @@
 
 namespace Messerli.Utility.Test
 {
-    public class MathTest
+    public sealed class MathTest
     {
         public static TheoryData<int, int, int> DifferenceExamples()
         {

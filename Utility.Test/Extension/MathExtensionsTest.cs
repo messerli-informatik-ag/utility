@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Messerli.Utility.Test.Extension
 {
-    public class MathExtensionsTest
+    public sealed class MathExtensionsTest
     {
         public static TheoryData<int, int, int> PowerExamples()
             => new TheoryData<int, int, int>

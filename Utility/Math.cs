@@ -1,6 +1,6 @@
 ﻿namespace Messerli.Utility
 {
-    public class Math
+    public static class Math
     {
         public static int Difference(int minuend, int subtrahend)
             => Δ(minuend, subtrahend);

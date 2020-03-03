@@ -7,7 +7,7 @@ using Xunit;
 
 namespace Messerli.Utility.Test.Extension
 {
-    public class TypeExtensionTest
+    public sealed class TypeExtensionTest
     {
         [Theory]
         [InlineData(typeof(IQueryable))]

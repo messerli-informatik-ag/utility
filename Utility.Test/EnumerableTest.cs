@@ -2,7 +2,7 @@
 
 namespace Messerli.Utility.Test
 {
-    public class EnumerableTest
+    public sealed class EnumerableTest
     {
         [Fact]
         public void RangeTest()

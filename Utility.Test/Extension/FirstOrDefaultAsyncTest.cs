@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Messerli.Utility.Test.Extension
 {
-    public class FirstOrDefaultAsyncTest
+    public sealed class FirstOrDefaultAsyncTest
     {
         [Theory]
         [MemberData(nameof(GetTaskList))]
