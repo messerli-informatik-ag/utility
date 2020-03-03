@@ -7,7 +7,6 @@
         <AssemblyName>Messerli.Utility</AssemblyName>
         <LangVersion>8.0</LangVersion>
         <Nullable>enable</Nullable>
-        <NullableContextOptions>enable</NullableContextOptions>
         <NoWarn>$(NoWarn),1591</NoWarn>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
