@@ -36,14 +36,14 @@ namespace Messerli.Utility.Extension
                    && (type.Attributes & TypeAttributes.NotPublic) == TypeAttributes.NotPublic;
         }
 
-        public static Type GetInnerType(this Type type)
+        public static Type? GetInnerType(this Type type)
             => type.IsArray
                 ? type.GetElementType()
                 : type.IsEnumerable()
                     ? type.GetGenericArguments().First()
                     : null;
 
-        public static object GetDefault(this Type type)
+        public static object? GetDefault(this Type type)
             => type.GetTypeInfo().IsValueType
                 ? Activator.CreateInstance(type)
                 : null;
