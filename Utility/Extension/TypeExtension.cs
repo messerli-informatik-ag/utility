@@ -11,14 +11,10 @@ namespace Messerli.Utility.Extension
     public static class TypeExtension
     {
         public static bool IsEnumerable(this Type type)
-        {
-            return type == typeof(IEnumerable) || type.GetInterface(nameof(IEnumerable)) != null;
-        }
+            => type == typeof(IEnumerable) || type.GetInterface(nameof(IEnumerable)) != null;
 
         public static bool IsQueryable(this Type type)
-        {
-            return type == typeof(IQueryable) || type.GetInterface(nameof(IQueryable)) != null;
-        }
+            => type == typeof(IQueryable) || type.GetInterface(nameof(IQueryable)) != null;
 
         /// <summary>
         /// Check if a type is a compiler generated anonymous type,
@@ -41,24 +37,18 @@ namespace Messerli.Utility.Extension
         }
 
         public static Type GetInnerType(this Type type)
-        {
-            return type.IsArray
+            => type.IsArray
                 ? type.GetElementType()
                 : type.IsEnumerable()
                     ? type.GetGenericArguments().First()
                     : null;
-        }
 
         public static object GetDefault(this Type type)
-        {
-            return type.GetTypeInfo().IsValueType
+            => type.GetTypeInfo().IsValueType
                 ? Activator.CreateInstance(type)
                 : null;
-        }
 
         public static IEnumerable<object> GetPropertyValues(this Type type, object instance)
-        {
-            return type.GetProperties().Select(property => property.GetValue(instance));
-        }
+            => type.GetProperties().Select(property => property.GetValue(instance));
     }
 }

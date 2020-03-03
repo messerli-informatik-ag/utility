@@ -6,8 +6,7 @@ namespace Messerli.Utility.Test.Extension
     public class MathExtensionsTest
     {
         public static TheoryData<int, int, int> PowerExamples()
-        {
-            return new TheoryData<int, int, int>
+            => new TheoryData<int, int, int>
             {
                 { 2048, 2, 11 },
                 { 1162261467, 3, 19 },
@@ -21,7 +20,6 @@ namespace Messerli.Utility.Test.Extension
                 { 1, 36845, 0 },
                 { 1, -36845, 0 },
             };
-        }
 
         [Theory]
         [MemberData(nameof(PowerExamples))]
@@ -32,8 +30,7 @@ namespace Messerli.Utility.Test.Extension
         }
 
         public static TheoryData<long, long, long> LongPowerExamples()
-        {
-            return new TheoryData<long, long, long>
+            => new TheoryData<long, long, long>
             {
                 { 2048L, 2L, 11L },
                 { 50031545098999707L, 3L, 35L },
@@ -41,7 +38,6 @@ namespace Messerli.Utility.Test.Extension
                 { 1L, 99L, 0L }, // exponent 0
                 { 1L, 36845L, 0L },
             };
-        }
 
         [Theory]
         [MemberData(nameof(LongPowerExamples))]

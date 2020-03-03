@@ -23,9 +23,7 @@ namespace Messerli.Utility.Test.Extension
             public bool SideEffect { get; private set; }
 
             public void Execute()
-            {
-                SideEffect = true;
-            }
+                => SideEffect = true;
         }
     }
 }
