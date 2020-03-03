@@ -40,9 +40,9 @@ namespace Messerli.Utility.Test.Extension
             return new TheoryData<Task<int>[], int, int>
             {
                 { new[] { Task.FromResult(1), Task.FromResult(2), Task.FromResult(3), Task.FromResult(4), Task.FromResult(5) }, 2, 3 },
-                { new[] {Task.FromResult(3), Task.FromResult(4), Task.FromResult(5)}, 2, 3 },
-                { new[] {Task.FromResult(1), Task.FromResult(2), Task.FromResult(3)}, 2, 3 },
-                { new[] {Task.FromResult(3)}, 2, 3 },
+                { new[] { Task.FromResult(3), Task.FromResult(4), Task.FromResult(5) }, 2, 3 },
+                { new[] { Task.FromResult(1), Task.FromResult(2), Task.FromResult(3) }, 2, 3 },
+                { new[] { Task.FromResult(3) }, 2, 3 },
             };
         }
 

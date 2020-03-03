@@ -22,9 +22,11 @@ namespace Messerli.Utility.Extension
 
         /// <summary>
         /// Check if a type is a compiler generated anonymous type,
-        /// such as 
+        /// such as:
+        /// <code>
         /// var anonymousType = new { Name = "Foo", Occupation = "Bar" };
-        /// Source: https://www.jefclaes.be/2011/05/checking-for-anonymous-types.html
+        /// </code>
+        /// <see href="https://www.jefclaes.be/2011/05/checking-for-anonymous-types.html">Source</see>.
         /// </summary>
         public static bool IsAnonymous(this Type type)
         {

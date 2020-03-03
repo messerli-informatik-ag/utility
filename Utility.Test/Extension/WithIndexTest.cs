@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using Messerli.Utility.Extension;
 using Xunit;
 

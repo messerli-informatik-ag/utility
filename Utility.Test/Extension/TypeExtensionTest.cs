@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Messerli.Utility.Extension;
 using System.Linq;
+using Messerli.Utility.Extension;
 using Xunit;
 
 namespace Messerli.Utility.Test.Extension

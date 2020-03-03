@@ -17,8 +17,7 @@ namespace Messerli.Utility.Test.Extension
                 { 0, 500, -2 },
                 { 250000, -500, 2 },
                 { -125000000, -500, 3 },
-                // exponent 0
-                { 1, 99, 0 },
+                { 1, 99, 0 }, // exponent 0
                 { 1, 36845, 0 },
                 { 1, -36845, 0 },
             };
@@ -39,8 +38,7 @@ namespace Messerli.Utility.Test.Extension
                 { 2048L, 2L, 11L },
                 { 50031545098999707L, 3L, 35L },
                 { 52645874569852L, 52645874569852L, 1L },
-                // exponent 0
-                { 1L, 99L, 0L },
+                { 1L, 99L, 0L }, // exponent 0
                 { 1L, 36845L, 0L },
             };
         }

@@ -19,8 +19,15 @@
 
         public static long Π(this long value, long exponent)
         {
-            if (exponent < 0) { return 0; }
-            if (exponent == 0) { return 1; }
+            if (exponent < 0)
+            {
+                return 0;
+            }
+
+            if (exponent == 0)
+            {
+                return 1;
+            }
 
             var m = Π(value, exponent / 2);
 
