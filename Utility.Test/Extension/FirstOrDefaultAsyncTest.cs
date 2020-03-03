@@ -73,7 +73,7 @@ namespace Messerli.Utility.Test.Extension
                 { new int[0], 10 },
             };
 
-        private static async Task<bool> GreaterThan<T>(IComparable<T> v1, T v2)
-            => await Task.FromResult(v1.CompareTo(v2) > 0);
+        private static Task<bool> GreaterThan<T>(IComparable<T> v1, T v2)
+            => Task.FromResult(v1.CompareTo(v2) > 0);
     }
 }
