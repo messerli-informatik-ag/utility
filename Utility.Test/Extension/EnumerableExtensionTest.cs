@@ -4,18 +4,8 @@ using Xunit;
 
 namespace Messerli.Utility.Test.Extension
 {
-    public class EnumerableExtensionTest
+    public sealed class EnumerableExtensionTest
     {
-        private class ForEachExecutor
-        {
-            public bool SideEffect { get; private set; }
-
-            public void Execute()
-            {
-                SideEffect = true;
-            }
-        }
-
         [Fact]
         public void ForEachExecutesAction()
         {
@@ -26,6 +16,14 @@ namespace Messerli.Utility.Test.Extension
 
             // ReSharper disable once PossibleMultipleEnumeration
             Assert.True(elements.All(element => element.SideEffect));
+        }
+
+        private class ForEachExecutor
+        {
+            public bool SideEffect { get; private set; }
+
+            public void Execute()
+                => SideEffect = true;
         }
     }
 }

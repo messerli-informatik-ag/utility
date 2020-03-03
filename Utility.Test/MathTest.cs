@@ -1,18 +1,17 @@
-﻿using System.Collections.Generic;
-using Xunit;
+﻿using Xunit;
 
 namespace Messerli.Utility.Test
 {
-    public class MathTest
+    public sealed class MathTest
     {
         public static TheoryData<int, int, int> DifferenceExamples()
         {
             return new TheoryData<int, int, int>
             {
-                {334, 1000, 666},
-                {254332385, 254873654, 541269},
-                {-100, 200, 300},
-                {-78862, 789654, 868516},
+                { 334, 1000, 666 },
+                { 254332385, 254873654, 541269 },
+                { -100, 200, 300 },
+                { -78862, 789654, 868516 },
             };
         }
 

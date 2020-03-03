@@ -2,12 +2,12 @@
 
 namespace Messerli.Utility.Test
 {
-    public class EnumerableTest
+    public sealed class EnumerableTest
     {
         [Fact]
         public void RangeTest()
         {
-            foreach (long i in Enumerable.Range(50031545098999707L, 50031545098999755L))
+            foreach (var i in Enumerable.Range(50031545098999707L, 50031545098999755L))
             {
                 Assert.InRange(i, 50031545098999707L, 50031545098999755L - 1);
             }

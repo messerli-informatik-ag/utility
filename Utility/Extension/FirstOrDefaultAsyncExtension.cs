@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+#nullable disable
+
 namespace Messerli.Utility.Extension
 {
     public static class FirstOrDefaultAsyncExtension
     {
-        public static async Task<TSource> FirstOrDefaultAsync<TSource>(this IEnumerable<Task<TSource>> source,
+        public static async Task<TSource> FirstOrDefaultAsync<TSource>(
+            this IEnumerable<Task<TSource>> source,
             Func<Task<TSource>, Task<bool>> predicate)
         {
             foreach (var item in source)
@@ -20,7 +23,8 @@ namespace Messerli.Utility.Extension
             return await Task.FromResult(default(TSource));
         }
 
-        public static async Task<TSource> FirstOrDefaultAsync<TSource>(this IEnumerable<TSource> source,
+        public static async Task<TSource> FirstOrDefaultAsync<TSource>(
+            this IEnumerable<TSource> source,
             Func<TSource, Task<bool>> predicate)
         {
             foreach (var item in source)
