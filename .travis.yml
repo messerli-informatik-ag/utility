@@ -13,7 +13,6 @@ install:
   - dotnet tool restore
 
 script:
- - dotnet paket install
  - dotnet restore
  - dotnet build
  - dotnet test

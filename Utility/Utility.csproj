@@ -20,5 +20,4 @@
         <Copyright>© Messerli Informatik AG. All rights reserved.</Copyright>
         <Description>Various utility functions and extension methods used by other Messerli libraries.</Description>
     </PropertyGroup>
-    <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
