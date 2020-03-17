@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -26,8 +26,6 @@ namespace Messerli.Utility.Extension
         /// </summary>
         public static bool IsAnonymous(this Type type)
         {
-            Debug.Assert(type is { }, "Type should not be null");
-
             // HACK: The only way to detect anonymous types right now.
             return Attribute.IsDefined(type, typeof(CompilerGeneratedAttribute), false)
                    && type.IsGenericType && type.Name.Contains("AnonymousType")
