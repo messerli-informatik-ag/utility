@@ -15,3 +15,6 @@
 ## 0.2.2
 - Add support for .NET Standard 2.0.
 - Remove misleading nullability attributes from `FirstOrDefaultAsync`.
+
+## unreleased
+- Add `ForEachAsync` extension for `IEnumerable`
