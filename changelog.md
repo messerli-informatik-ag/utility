@@ -18,3 +18,6 @@
 
 ## 0.2.3
 - Add `ForEachAsync` extension for `IEnumerable`
+
+## 0.3.0
+- The extension method `ForEach` for `IEnumerable` has been removed. Use the method of the same name from [Funcky](https://github.com/messerli-informatik-ag/funcky/blob/master/Funcky/Extensions/EnumerableExtensions.cs) instead (The method was called `Each` in versions before 2.0.0). 
