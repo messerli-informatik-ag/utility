@@ -22,7 +22,7 @@ namespace Messerli.Utility.Exception
         };
     }
 
-    public class UnhandledEnumVariantException<T> : UnhandledEnumVariantException
+    public sealed class UnhandledEnumVariantException<T> : UnhandledEnumVariantException
         where T : notnull
     {
         public UnhandledEnumVariantException(T value)
