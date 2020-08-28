@@ -4,22 +4,28 @@ namespace Messerli.Utility.Exception
 {
     public class UnhandledEnumVariantException : System.Exception
     {
-        public UnhandledEnumVariantException(Type type, string value)
+        public UnhandledEnumVariantException(Type enumType, object instance)
         {
-            Type = type;
-            Value = value;
+            EnumType = enumType;
+            Instance = instance;
         }
 
-        public Type Type { get; }
+        public Type EnumType { get; }
 
-        public string Value { get; }
+        public object Instance { get; }
 
-        public override string Message => $"Variant {Value} of {Type.Name} is unhandled.";
+        public override string Message => EnumType switch
+        {
+            _ when EnumType.IsEnum => $"Variant '{Instance.ToString()}' of '{EnumType.Name}' is unhandled.",
+            _ when EnumType.IsAbstract || EnumType.IsInterface => $"Variant '{Instance.GetType().Name}' of '{EnumType.Name}' is unhandled.",
+            _ => $"The variant '{EnumType.Name}' is unhandled.",
+        };
     }
 
     public class UnhandledEnumVariantException<T> : UnhandledEnumVariantException
+        where T : notnull
     {
-        public UnhandledEnumVariantException(string value)
+        public UnhandledEnumVariantException(T value)
             : base(typeof(T), value)
         {
         }
