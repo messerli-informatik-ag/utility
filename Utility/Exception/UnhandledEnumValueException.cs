@@ -2,9 +2,9 @@
 
 namespace Messerli.Utility.Exception
 {
-    public class UnhandledEnumVariantException : System.Exception
+    public class UnhandledEnumValueException : System.Exception
     {
-        public UnhandledEnumVariantException(Type enumType, object instance)
+        public UnhandledEnumValueException(Type enumType, object instance)
         {
             EnumType = enumType;
             Instance = instance;
@@ -22,10 +22,10 @@ namespace Messerli.Utility.Exception
         };
     }
 
-    public sealed class UnhandledEnumVariantException<T> : UnhandledEnumVariantException
+    public sealed class UnhandledEnumValueException<T> : UnhandledEnumValueException
         where T : notnull
     {
-        public UnhandledEnumVariantException(T value)
+        public UnhandledEnumValueException(T value)
             : base(typeof(T), value)
         {
         }
