@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Messerli.Utility.Test.Exception
 {
-    public class UnhandledEnumVariantExceptionTest
+    public class UnhandledEnumValueExceptionTest
     {
         private enum TestEnum
         {
