@@ -19,7 +19,7 @@ namespace Messerli.Utility.Test.Exception
         [MemberData(nameof(GetEnumVariantExamples))]
         public void MessageMatches(Type enumType, object instance, string expected)
         {
-            var exception = new UnhandledEnumVariantException(enumType, instance);
+            var exception = new UnhandledEnumValueException(enumType, instance);
             Assert.Equal(expected, exception.Message);
         }
 
@@ -34,8 +34,8 @@ namespace Messerli.Utility.Test.Exception
         [Fact]
         public void GenericClassMatchesNonGeneric()
         {
-            var genericException = new UnhandledEnumVariantException<ITestInterface>(new TestInstance());
-            var exception = new UnhandledEnumVariantException(typeof(ITestInterface), new TestInstance());
+            var genericException = new UnhandledEnumValueException<ITestInterface>(new TestInstance());
+            var exception = new UnhandledEnumValueException(typeof(ITestInterface), new TestInstance());
 
             Assert.Equal(exception.Message, genericException.Message);
         }
